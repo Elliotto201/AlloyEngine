@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mathematics\**" />
+    <EmbeddedResource Remove="Mathematics\**" />
+    <None Remove="Mathematics\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssetIdGenerator.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core-C#\AlloyEngine3D\AlloyEngine3D.csproj" />
+    <ProjectReference Include="..\..\..\Shared-C#\AlloyShared\AlloyShared.csproj" />
+  </ItemGroup>
+
+</Project>
