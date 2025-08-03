@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AlloyShared
+namespace AlloyEngine3D_Internal
 {
     public readonly struct AssetId : IEquatable<AssetId>
     {

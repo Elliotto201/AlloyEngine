@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace AlloyEngine3D
 {
-    public struct FileReference
+    public static class LevelLoader
     {
+        public static void LoadLevel(string name)
+        {
 
+        }
     }
 }
