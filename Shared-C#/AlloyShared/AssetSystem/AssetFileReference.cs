@@ -8,7 +8,7 @@ namespace AlloyEngine3D_Internal
 {
     public struct AssetFileReference
     {
-        public string Path { get; private set; }
+        public string Path { get; set; }
 
         public AssetFileReference(string assetPath)
         {

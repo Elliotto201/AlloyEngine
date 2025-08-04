@@ -8,12 +8,17 @@
 
   <ItemGroup>
     <Compile Remove="Mathematics\**" />
+    <Compile Remove="Rendering\**" />
     <EmbeddedResource Remove="Mathematics\**" />
+    <EmbeddedResource Remove="Rendering\**" />
     <None Remove="Mathematics\**" />
+    <None Remove="Rendering\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="AssetIdGenerator.cs" />
+    <Compile Remove="EngineObject.cs" />
+    <Compile Remove="EngineObjectSerializer.cs" />
   </ItemGroup>
 
   <ItemGroup>

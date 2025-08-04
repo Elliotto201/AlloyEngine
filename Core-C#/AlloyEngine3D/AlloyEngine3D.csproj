@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EngineObject.cs" />
     <Compile Remove="Rendering\ShaderBase.cs" />
   </ItemGroup>
 

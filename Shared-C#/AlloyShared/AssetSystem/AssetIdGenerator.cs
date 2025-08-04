@@ -24,10 +24,12 @@ namespace AlloyEngine3D_Internal
         private static readonly HashSet<AssetId> ids = new();
         private static readonly object lockObj = new();
 
-        public static AssetId GetId(AssetId requestedId)
+        public static AssetId GetId()
         {
             lock (lockObj)
             {
+                var requestedId = new AssetId();
+
                 if (requestedId.Id != 0 && !ids.Contains(requestedId))
                 {
                     ids.Add(requestedId);
