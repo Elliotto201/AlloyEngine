@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlloyEngine3D_Internal
+namespace AlloyRendering
 {
     [StructLayout(LayoutKind.Sequential)]
-    public struct ShaderInfo
+    public struct WindowHandle
     {
-        public int shaderId;
+        public int handle;
     }
 }

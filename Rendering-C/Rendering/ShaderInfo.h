@@ -5,4 +5,4 @@ typedef struct {
     int shaderId;
 } ShaderInfo;
 
-#endif //SHADERINFO_H
+#endif

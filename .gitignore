@@ -94,3 +94,9 @@ compile_commands.json
 *.ipr
 *.iws
 *.iml
+
+#Build folder
+/Build/*
+!/Build/.gitkeep
+
+vcpkg_path.txt

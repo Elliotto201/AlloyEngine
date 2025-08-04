@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core-C#\AlloyEngine3D\AlloyEngine3D.csproj" />
+    <ProjectReference Include="..\..\..\Core-C#\AlloyEngine3D\AlloyRenderer.csproj" />
     <ProjectReference Include="..\..\..\Shared-C#\AlloyShared\AlloyShared.csproj" />
   </ItemGroup>
 

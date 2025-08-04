@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlloyEngine3D", "AlloyEngine3D.csproj", "{8BB09DC4-9862-4CA3-9D59-6332DD6B4A77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlloyRenderer", "AlloyRenderer.csproj", "{8BB09DC4-9862-4CA3-9D59-6332DD6B4A77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlloyUser3D", "..\..\User-C#\AlloyEngine3D\AlloyUser3D\AlloyUser3D.csproj", "{CF7A24CF-DB2D-4A77-9C5E-135825B5CB88}"
 EndProject

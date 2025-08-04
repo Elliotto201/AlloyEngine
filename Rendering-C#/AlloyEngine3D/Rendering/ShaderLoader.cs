@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace AlloyEngine3D_Internal
+namespace AlloyRendering
 {
     public static partial class ShaderLoader
     {

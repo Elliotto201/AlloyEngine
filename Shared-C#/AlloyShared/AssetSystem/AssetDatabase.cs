@@ -25,7 +25,7 @@ namespace AlloyEngine3D
             AssetPackPath = assetPackPath;
         }
 
-        public static T CreateAssetEditor<T>(string path, string name, object[] constructorArguments) where T : EngineObject
+        public static T CreateEditorAsset<T>(string path, string name, object[] constructorArguments) where T : EngineObject
         {
             T baseAsset = (T)FormatterServices.GetUninitializedObject(typeof(T));
             T asset = baseAsset.CreateNewAsset<T>(constructorArguments);

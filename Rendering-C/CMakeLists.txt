@@ -10,15 +10,19 @@ find_package(cglm CONFIG REQUIRED)
 
 add_library(MyGLFWApp SHARED
         glad/src/glad.c
-        "Level Editor/LevelEditorWindow.cpp"
         Rendering/SceneRenderer.cpp
         Rendering/DrawCall.h
         Rendering/ShaderLoader.c
         Rendering/ShaderLoader.h
         Rendering/ShaderInfo.h
-        # Don't include headers here
+        Windowing/WindowHandle.h
+        Windowing/WindowHandler.c
 )
 
 target_include_directories(MyGLFWApp PRIVATE "${CMAKE_SOURCE_DIR}/glad/include")
+
+target_compile_options(MyGLFWApp PRIVATE
+        $<$<COMPILE_LANGUAGE:C>:-Wno-unused-parameter>
+)
 
 target_link_libraries(MyGLFWApp PRIVATE glfw OpenGL::GL cglm::cglm)

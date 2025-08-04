@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\AlloyEngine\AlloyEngine\Rendering-C\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Rendering\SceneRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Rendering\ShaderLoader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Windowing\WindowHandler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Rendering\DrawCall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Rendering\ShaderLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Rendering\ShaderInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\AlloyEngine\AlloyEngine\Rendering-C\Windowing\WindowHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\AlloyEngine\AlloyEngine\Rendering-C\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4DD0E8C2-9440-3791-90E5-2BC72A975BE9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7467408D-F2FB-356D-9158-8A12112F5690}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

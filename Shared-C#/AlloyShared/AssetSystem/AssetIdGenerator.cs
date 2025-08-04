@@ -28,14 +28,6 @@ namespace AlloyEngine3D_Internal
         {
             lock (lockObj)
             {
-                var requestedId = new AssetId();
-
-                if (requestedId.Id != 0 && !ids.Contains(requestedId))
-                {
-                    ids.Add(requestedId);
-                    return requestedId;
-                }
-
                 AssetId newId;
                 var rng = new Random();
                 do
