@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace AlloyRuntime.IO
 {
-    internal interface IAssetPostProcessor<T> where T : EngineObject
+    internal abstract class AssetPostProcessor
     {
-        public void Process(EngineObject obj);
+        public abstract void Process(EngineObject obj);
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace AlloyEngine
+namespace AlloyRuntime
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
     internal sealed class KeyValueObjectAttribute : Attribute { }

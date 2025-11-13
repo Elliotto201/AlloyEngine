@@ -15,17 +15,11 @@ namespace AlloyRuntime.IO
         private static MessagePackSerializerOptions serializerOptions => ContractlessStandardResolverAllowPrivate.Options
             .WithSecurity(MessagePackSecurity.UntrustedData);
 
-        internal static void InitializeEngine(AssetEngineContext context)
+        internal static void InitializeEngine(AssetEngineContext context
+            ,Dictionary<Type, AssetPostProcessor> _assetPostProcessors
+            ,Dictionary<Type, CustomAssetSerializer> _assetSerializers)
         {
             Context = context;
-            Type interfaceType = typeof(IAssetPostProcessor<>);
-            AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(a =>
-                {
-                    try { return a.GetTypes(); }
-                    catch { return Array.Empty<Type>(); }
-                })
-                .Where(t => t.IsClass && !t.IsAbstract && interfaceType.IsAssignableFrom(t));
         }
 
         internal static object LoadAsset(string assetName, Type type)
@@ -80,29 +74,45 @@ namespace AlloyRuntime.IO
             }
         }
 
-        internal static void CreateAsset<T>(string assetName, T asset)
+        internal static byte[] LoadAssetRaw(string assetName)
+        {
+            var path = Path.Combine(Context.AssetRootFolderPath, assetName);
+            path = Path.GetFullPath(path);
+
+            return File.ReadAllBytes(path);
+        }
+
+        internal static async Task<byte[]> LoadAssetRawAsync(string assetName)
+        {
+            var path = Path.Combine(Context.AssetRootFolderPath, assetName);
+            path = Path.GetFullPath(path);
+
+            return await File.ReadAllBytesAsync(path);
+        }
+
+        internal static void WriteAsset<T>(string assetName, T asset)
         {
             var path = Path.Combine(Context.AssetRootFolderPath, assetName);
             path = Path.GetFullPath(path);
 
             if (Context.IsYamlAssets)
             {
-                using var yamlAssetStream = File.CreateText(path);
                 var serializedAsset = YamlSerializer.Serialize(asset);
-
-                yamlAssetStream.Write(serializedAsset);
-
-                yamlAssetStream.Flush();
+                File.WriteAllText(path, serializedAsset);
             }
             else
             {
-                using var binAssetStream = File.Create(path);
                 var serializedAsset = MessagePackSerializer.Serialize(typeof(T), asset, serializerOptions);
-
-                binAssetStream.Write(serializedAsset);
-
-                binAssetStream.Flush(true);
+                File.WriteAllBytes(path, serializedAsset);
             }
+        }
+
+        internal static void WriteAssetRaw(string assetName, byte[] data)
+        {
+            var path = Path.Combine(Context.AssetRootFolderPath, assetName);
+            path = Path.GetFullPath(path);
+
+            File.WriteAllBytes(path, data);
         }
 
         internal static void DeleteAsset(string assetName)

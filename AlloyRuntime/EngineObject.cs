@@ -8,18 +8,22 @@ namespace AlloyEngine
 {
     public abstract class EngineObject
     {
-
         internal void CreateObject()
         {
-
+            
         }
 
         internal void DisposeObject()
         {
-
+            
         }
 
         protected abstract void Create();
         protected abstract void Dispose();
+
+        public static void Destroy(EngineObject engineObject)
+        {
+            engineObject.DisposeObject();
+        }
     }
 }
