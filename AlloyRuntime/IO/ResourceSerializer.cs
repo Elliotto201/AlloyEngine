@@ -11,12 +11,5 @@ namespace AlloyRuntime.IO
     {
         public abstract byte[] Serialize(byte[] rawAsset);
         public abstract object Deserialize(byte[] asset);
-
-        protected T CreateResource<T>(params object[] constructorArgs) where T : EngineResource
-        {
-            var t = Activator.CreateInstance(typeof(T), constructorArgs);
-
-            return (T)t;
-        }
     }
 }
